@@ -94,6 +94,7 @@ void dijkstra(int graph[V][V])
 
 int main()
 {
+	cout << "Hello World";
 	int graph[V][V] = { {0, 1, 4, 0, 0, 0},
 						{1, 0, 4, 2, 7, 0},
 						{4, 4, 0, 3, 5, 0},
