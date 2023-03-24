@@ -7,19 +7,28 @@ using namespace std;
 string selectCityName(int number)
 {
     string nameofCity;
-    switch (number)
+    switch (number) {
         case 1:
             nameofCity = "Kansas City";
+            break;
         case 2: 
             nameofCity = "St. Lious";
+            break;
         case 3:
             nameofCity = "Denver";
+            break;
         case 4:
             nameofCity = "Minneapolis";
+            break;
         case 5:
             nameofCity = "Eureka Springs";
+            break;
         case 6:
             nameofCity = "Houston";
+            break;
+        default:
+            nameofCity = "Nowhere";
+    }
     return nameofCity;
 }
 
