@@ -1,5 +1,7 @@
+//#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
+#include <climits>
 
 using namespace std;
 
@@ -10,22 +12,22 @@ string selectCityName(int number)
 {
     string nameofCity;
     switch (number) {
-        case 1:
+        case 0:
             nameofCity = "Kansas City";
             break;
-        case 2: 
+        case 1: 
             nameofCity = "St. Lious";
             break;
-        case 3:
+        case 2:
             nameofCity = "Denver";
             break;
-        case 4:
+        case 3:
             nameofCity = "Minneapolis";
             break;
-        case 5:
+        case 4:
             nameofCity = "Eureka Springs";
             break;
-        case 6:
+        case 5:
             nameofCity = "Houston";
             break;
         default:
@@ -89,14 +91,15 @@ void dijkstra(int graph[V][V])
 			}
 		}
 	}
-	//Print Shortest Path Graph
+	//Print Shortest Path Graph, currently shows the previous city visited to reach that city using the shortest path
 	for(int i=1;i<V;++i)
-		cout<<"U->V: "<<parent[i]<<nameCity[i]<<"->"<<i<<"  wt = "<<graph[parent[i]][i]<<"\n";
-}
+		cout<<"U->V: "<<nameCity[parent[i]]<<"->"<<nameCity[i]<<"  wt = "<<graph[parent[i]][i]<<"\n";
 
+}
+//Users should be able to pick a city to go to and the entire shortest path should be shown to that city
 int main()
 {
-	cout << "Hello World";
+	//cout << "Hello World";
 	int graph[V][V] = { {0, 1, 4, 0, 0, 0},
 						{1, 0, 4, 2, 7, 0},
 						{4, 4, 0, 3, 5, 0},
