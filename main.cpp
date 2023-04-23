@@ -38,6 +38,7 @@ string selectCityName(int number)
 
 int selectMinVertex(vector<int>& value,vector<bool>& processed)
 {
+	cout << "select min vertex" << endl;
 	int minimum = INT_MAX;
 	int vertex;
 	for(int i=0;i<V;++i)
@@ -94,6 +95,13 @@ void dijkstra(int graph[V][V])
 	//Print Shortest Path Graph, currently shows the previous city visited to reach that city using the shortest path
 	for(int i=1;i<V;++i)
 		cout<<"U->V: "<<nameCity[parent[i]]<<"->"<<nameCity[i]<<"  wt = "<<graph[parent[i]][i]<<"\n";
+
+	cout << "\n" << " " << endl;
+
+	for(int i=1;i<V;++i)
+		for(int j = 1;j <V;++j)
+		cout<<"U->V: "<<nameCity[i]<<"->"<<"  wt = "<<graph[i][j]<<"\n";
+
 
 }
 //Users should be able to pick a city to go to and the entire shortest path should be shown to that city
